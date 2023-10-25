@@ -4,12 +4,11 @@ const categoriesNum = listItems.length;
 
 const message = console.log(`Number of categories: ${categoriesNum}`);
 listItems.forEach(function(element){
-    const elementTitle = element.querySelector("h2").textContent;
-    const elementsNum = element.querySelectorAll("li").length;
+    const elementTitle = element.firstElementChild.textContent;
+    const elementsNum = element.lastElementChild.children.length
 
     console.log(`Category: ${elementTitle}`);
-    console.log(`Elements: ${elementsNum}`);
-
+    console.dir(`Elements: ${elementsNum}`);
 });
 
 
